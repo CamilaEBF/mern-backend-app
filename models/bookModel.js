@@ -7,4 +7,21 @@ const bookModel = new Schema({
     type: String,
     required: true
   },
+  authors: {
+    type: Array,
+    required: true,
+  },
+  genre: {
+    type: String,
+  },
+  read: {
+    type: Boolean,
+    default: false,
+  },
+  categories: {
+    type: Array,
+    required: true,
+  }
 });
+
+module.exports = mongoose.model('Book', bookModel);

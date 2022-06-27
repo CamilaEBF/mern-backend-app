@@ -21,7 +21,11 @@ const bookModel = new Schema({
   categories: {
     type: Array,
     required: true,
-  }
+  },
+  isbn: {
+    type: String,
+    required: true,
+  },
 });
 
 module.exports = mongoose.model('Book', bookModel);
